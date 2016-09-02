@@ -1,5 +1,7 @@
 apastylr
-------------------------------------------------------------------------------
+--------
+[![Build Status](https://travis-ci.org/cedricbatailler/apastylr.svg?branch=master)](https://travis-ci.org/cedricbatailler/apastylr)
+
 Many psychology journals request articles to adopt an APA-norm result reporting. apastylr eases the R to articles step by creating a list of linear model coefficients which is is APA formatted.
 
 ## Installation

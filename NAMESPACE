@@ -2,5 +2,3 @@
 
 export(apastylr)
 importFrom(broom,tidy)
-importFrom(dplyr,mutate)
-importFrom(dplyr,select)

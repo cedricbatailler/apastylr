@@ -5,10 +5,12 @@
 \title{Create a data frame with APA rules formated coefficient informations 
 of a linear model}
 \usage{
-apastylr(model)
+apastylr(model, statistics = "T")
 }
 \arguments{
 \item{model}{A linear model created using lm().}
+
+\item{statistics}{Reports student's t ("T") or Fisher's F ("F").}
 }
 \description{
 Create a data frame with APA rules formated coefficient informations 

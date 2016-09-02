@@ -2,6 +2,7 @@
 #' of a linear model
 #' 
 #' @param model A linear model created using lm().
+#' @param statistics Reports student's t ("T") or Fisher's F ("F").
 #'
 #' @export
 

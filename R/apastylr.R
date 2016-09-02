@@ -11,11 +11,6 @@ apastylr <- function(model) {
   if (!requireNamespace("broom", quietly = TRUE)) {
     stop("broom needed for this function to work. Please install it.",
          call. = FALSE)
-  } 
-  
-  if (!requireNamespace("dplyr", quietly = TRUE)) {
-    stop("dplyr needed for this function to work. Please install it.",
-         call. = FALSE)
   }
   
   if(!class(model) == "lm") {

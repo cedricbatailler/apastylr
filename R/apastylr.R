@@ -7,7 +7,7 @@
 
 #' @importFrom broom tidy
 
-apastylr <- function(model, statistics = "t") {
+apastylr <- function(model) {
   if (!requireNamespace("broom", quietly = TRUE)) {
     stop("broom needed for this function to work. Please install it.",
          call. = FALSE)

@@ -6,7 +6,7 @@ Many psychology journals request articles to adopt an APA-norm result reporting.
 
 apastylr has no been yet submit on CRAN beacause of the few functions it adds (namely, one) and because of its statuts (namely, experimental). The latest version can be found on GitHub and can be installed using the following code:
 
-```r
+``` r
 library(devtools)
 devtools::install_github("cedricbatailler/apastylr")
 ```
@@ -15,7 +15,7 @@ devtools::install_github("cedricbatailler/apastylr")
 
 `apastylr()` can be used the following way to produce APA formatted results:
 
-```r
+``` r
 library(apastylr)
 
 model <- lm(Score ~ 1)

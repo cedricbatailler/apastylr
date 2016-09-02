@@ -1,7 +1,7 @@
 Package: apastylr
 Type: Package
 Title: Easy APA norms formating for results reporting
-Version: 0.1.1
+Version: 0.2.0
 Author: Cedric Batailler [aut, cre]
 Maintainer: Cedric Batailler <cedric.batailler@hotmail.com>
 Description: Many psychology journals request articles to adopt an APA-norm result reporting. apastylr eases the R to articles step by creating a list of linear model coefficients which is is APA formatted.

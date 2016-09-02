@@ -6,9 +6,8 @@
 #' @export
 
 #' @importFrom broom tidy
-#' @importFrom dplyr select
-#' @importFrom dplyr mutate
-apastylr <- function(model) {
+
+apastylr <- function(model, statistics = "t") {
   if (!requireNamespace("broom", quietly = TRUE)) {
     stop("broom needed for this function to work. Please install it.",
          call. = FALSE)
@@ -26,19 +25,19 @@ apastylr <- function(model) {
   
   summary <- broom::tidy(model)
   
-  summary <- dplyr::mutate(summary,
-                           APA = paste0("t(",
-                                        model$df.residual,
-                                        ") = ",
-                                        format(abs(round(statistic, 2)), nsmall = 2),
-                                        ", p ",
-                                        ifelse(p.value < .001,
-                                               "< .001",
-                                               paste0("= ",
-                                               sub(".", "",
-                                                   format(round(p.value, 3), nsmall = 3))))))
+  summary$APA <- paste0("t(",
+                        model$df.residual,
+                        ") = ",
+                        format(abs(round(summary$statistic, 2)), nsmall = 2),
+                        ", p ",
+                        ifelse(summary$p.value < .001,
+                               "< .001",
+                               paste0("= ",
+                                      sub(".", "",
+                                          format(round(summary$p.value, 3), nsmall = 3)))))
+
+  summary <- data.frame(Term = summary$term,
+                        APA  = summary$APA)
   
-  summary <- dplyr::select(summary,
-                           term, APA)
   return(summary)
 }

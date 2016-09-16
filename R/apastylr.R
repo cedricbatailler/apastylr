@@ -53,11 +53,11 @@ apastylr <- function(model, statistics = "T") {
   # Creating p-value text for each coefficient
   
   table$pvaluetext <- ifelse(table$pvalue_nb < .001,
-                   "p < .001",
-                   table$pvalue_txt)
-
+                             "p < .001",
+                             paste0("p = ", table$pvalue_txt))
+  
   table$APA <- paste0(table$stattext, ", ", table$pvaluetext)
-
+  
   # Creating APA formatted summary
   
   summary <- data.frame(Term = table$term,

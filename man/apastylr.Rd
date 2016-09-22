@@ -5,12 +5,14 @@
 \title{Create a data frame with APA rules formated coefficient informations 
 of a linear model}
 \usage{
-apastylr(model, statistics = "T")
+apastylr(model, statistics = "T", rmd = FALSE)
 }
 \arguments{
 \item{model}{A linear model created using lm().}
 
 \item{statistics}{Reports student's t ("T") or Fisher's F ("F").}
+
+\item{rmd}{Wether returned object should be formatted for RMarkdown (TRUE or FALSE)}
 }
 \description{
 Create a data frame with APA rules formated coefficient informations 
